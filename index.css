@@ -1,8 +1,12 @@
 /* Root Variables */
 
 :root {
-  --background-color: #E5E5E5;
-  --font-color-bold: #4E4E4E;
+  --background-color: #E3E7EC;
+  --gray: #4E4E4E;
+  --blue: #6F98A5;
+
+  --font-size-regular: 1.8rem;
+  --font-size-large: 3.6rem;
 }
 
 /* Global Resets */
@@ -32,20 +36,33 @@ body {
   font-optical-sizing: auto;
   font-weight: 800;
   font-style: normal;
-  color: var(--font-color-bold);
+  color: var(--gray);
+}
+
+.lato {
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+a {
+    text-decoration: none;
 }
 
 /* Main Styles */
 
 header {
+    position: fixed;
+    top: 0;
     background: white;
     width: 100%;
-    height: 7rem;
-    border-bottom: 1px solid rgb(0, 0, 0, 0.75);
+    height: 8rem;
     display: flex;
+    border-bottom: 1px solid var(--gray);
     justify-content: space-between;
     align-items: center;
-    padding: 0 20px 0 20px;
+    padding: 0 2rem;
+    z-index: 1;
 }
 
 #menuSignature {
@@ -54,7 +71,7 @@ header {
 }
 
 header h3 {
-    font-size: 1.6rem;
+    font-size: var(--font-size-regular);
     margin-left: 2.5rem;
 }
 
@@ -65,12 +82,10 @@ header img {
 }
 
 header nav a {
-    text-decoration: none;
     position: relative;
     margin-left: 3rem;
-    text-decoration: none;
     color: inherit;
-    font-size: 1.6rem;
+    font-size: var(--font-size-regular);
     display: inline-block;
 }
 
@@ -81,11 +96,76 @@ header nav a::after {
     bottom: -4px;
     width: 0%;
     height: 3px;
-    background: #6F98A5; 
+    background: var(--blue); 
     transition: width 0.25s ease;
     transform-origin: left;
 }
 
 header nav a:hover::after {
     width: 100%;
+}
+
+section {
+    padding: 0 3rem;
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+}
+
+#aboutMe { margin-top: 10rem; }
+
+.section-info-container { margin-top: 10rem; max-width: 50rem; }
+
+
+.section-info-container h1 {
+    font-size: var(--font-size-large);
+}
+
+.paragraph-text {
+    font-size: var(--font-size-regular);
+    line-height: 2rem;
+    margin: 1.5rem 0 3rem 0;
+    color: var(--gray)
+}
+
+.button-container {
+    display: flex;
+}
+
+.cta-button {
+    width: 15rem;
+    display: block;
+    padding: 12px 20px;
+    transition: 0.4s;
+    border-radius: 0.3rem;
+    text-align: center;
+    font-size: 1.4rem;
+    background: var(--blue);
+    color: white;
+    margin-right: 3.5rem;
+    box-shadow: 2px 2px 10px #BEBEBE;
+}
+
+.cta-button:hover { opacity: 0.8; }
+
+.image-gallery {
+    margin-left: 4rem;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 3rem;
+    align-items: center;
+}
+
+.image-gallery img {
+    margin-left: 2rem;
+    box-shadow: 2px 2px 10px #BEBEBE;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.image-gallery img:hover {
+    transform: scale(1.05);
 }
