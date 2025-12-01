@@ -22,17 +22,39 @@
     <!-- Desktop Menu -->
     <header>
         <div id="menuSignature">
-            <img src="./assets/arthur-kakulidis.png" alt="Profile picture" />
+            <img src="./assets/arthur-kakulidis.png" alt="Profile picture" class="round" />
             <h3 class="gsc">Arthur Kakulidis</h3>
         </div>
 
-        <nav>
+        <nav id="desktopMenu">
             <a class="gsc" href="/">About</a>
             <a class="gsc" href="#work">Work</a>
             <a class="gsc" href="/blog">Blog</a>
             <a class="gsc" href="#contact">Contact</a>
         </nav>
+
+        <img src="./assets/menu-icon.png" id="hamburgerMenu" alt="Menu icon" />
     </header>
+
+    <nav id="mobileMenu">
+        <img src="./assets/close-icon.png" class="close-icon" id="menuClose" alt="Close menu" />
+        <ul>
+            <li><span class="lato">></span><a href="/" class="lato">About</a></li>
+            <li><span class="lato">></span><a href="#work" class="lato">Work</a></li>
+            <li><span class="lato">></span><a href="/blog" class="lato">Blog</a></li>
+            <li><span class="lato">></span><a href="#contact" class="lato">Contact</a></li>
+        </ul>
+
+        <div id="socialMediaMenu">
+            <a href="#">
+                <img src="./assets/linkedin-icon.png" alt="Linkedin icon">
+            </a>
+
+            <a href="#">
+                <img src="./assets/github-icon.png" alt="Github icon">
+            </a>
+        </div>
+    </nav> 
 
     <section id="aboutMe">
         <div class="section-info-container">
@@ -47,20 +69,62 @@
 
         <div class="image-gallery" id="aboutSectionGallery">
             <div class="row">
-                <img src="./assets/webstream-profile.jpg" alt="Webstream profile page" width="240" />
-                <img src="./assets/webstream-live.jpg" alt="Webstream stream page" width="240" />
-            </div>
-            <div class="row" style="justify-content: start;">
-                <img src="./assets/topstyle-mobile.jpg" alt="TopStyle mobile" width="60" />
-                <img src="./assets/topstyle-desktop.jpg" alt="TopStyle desktop" width="415" />
+                <img src="./assets/desktop/webstream-profile.jpg" alt="Webstream profile page" class="desktop-image" />
+                <img src="./assets/desktop/webstream-live.jpg" alt="Webstream stream page" class="desktop-image" />
+
+
+                <img src="./assets/mobile/webstream-live.jpg" alt="Webstream stream page" class="mobile-image" />
             </div>
             <div class="row">
-                <img src="./assets/mp-register.jpg" alt="Mission Planner register user page" width="110" />
-                <img src="./assets/mp-mission-log.jpg" alt="Mission Planner mission log" width="100" />
-                <img src="./assets/mp-new-profile.jpg" alt="Mission Planner new UAV profile" width="85" />
-                <img src="./assets/mp-starter.jpg" alt="Mission Planner starter page" width="125" />
+                <img src="./assets/desktop/topstyle-mobile.jpg" alt="TopStyle mobile" class="desktop-image" />
+                <img src="./assets/desktop/topstyle-desktop.jpg" alt="TopStyle desktop" class="desktop-image" />
+
+
+                <img src="./assets/mobile/topstyle-desktop.jpg" alt="TopStyle desktop" class="mobile-image" />
+            </div>
+            <div class="row">
+                <img src="./assets/desktop/mp-register.jpg" alt="Mission Planner register user page" class="desktop-image" />
+                <img src="./assets/desktop/mp-mission-log.jpg" alt="Mission Planner mission log" class="desktop-image" />
+                <img src="./assets/desktop/mp-new-profile.jpg" alt="Mission Planner new UAV profile" class="desktop-image" />
+                <img src="./assets/desktop/mp-starter.jpg" alt="Mission Planner starter page" class="desktop-image" />
+
+
+                <img src="./assets/mobile/mp-mission-log.jpg" alt="Mission Planner mission log" class="mobile-image" />
+                <img src="./assets/mobile/mp-new-profile.jpg" alt="Mission Planner new UAV profile" class="mobile-image" />
             </div>
         </div>
     </section>
+
+    <!-- Mobile Menu -->
+    <script type="text/javascript">
+        document.addEventListener("DOMContentLoaded", () => {
+            const hamburger = document.getElementById("hamburgerMenu");
+            const menu = document.getElementById("mobileMenu");
+            const overlay = document.createElement("div");
+            const navItems = menu.querySelectorAll("li");
+            overlay.id = "menuOverlay";
+            document.body.appendChild(overlay);
+
+            const closeBtn = document.getElementById("menuClose");
+
+            function openMenu() {
+                menu.classList.add("open");
+                overlay.classList.add("open");
+                document.body.style.overflow = "hidden";
+            }
+
+            function closeMenu() {
+                menu.classList.remove("open");
+                overlay.classList.remove("open");
+                document.body.style.overflow = "";
+            }
+
+            hamburger.addEventListener("click", openMenu);
+            closeBtn.addEventListener("click", closeMenu);
+            overlay.addEventListener("click", closeMenu);
+            navItems.forEach((i) => i.addEventListener("click", closeMenu))
+        });
+    </script>
+
 </body>
 </html>
