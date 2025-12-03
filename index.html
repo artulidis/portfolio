@@ -20,41 +20,10 @@
     </head>
 <body>
     <!-- Desktop Menu -->
-    <header>
-        <div id="menuSignature">
-            <img src="./assets/arthur-kakulidis.png" alt="Profile picture" class="round" />
-            <h3 class="gsc">Arthur Kakulidis</h3>
-        </div>
-
-        <nav id="desktopMenu">
-            <a class="gsc" href="/">About</a>
-            <a class="gsc" href="#work">Work</a>
-            <a class="gsc" href="/blog">Blog</a>
-            <a class="gsc" href="#contact">Contact</a>
-        </nav>
-
-        <img src="./assets/menu-icon.png" id="hamburgerMenu" alt="Menu icon" />
+    <header id="menuSignature">
+        <img src="./assets/arthur-kakulidis.png" alt="Profile picture" class="round" />
+        <h3 class="gsc">Arthur Kakulidis</h3>
     </header>
-
-    <nav id="mobileMenu">
-        <img src="./assets/close-icon.png" class="close-icon" id="menuClose" alt="Close menu" />
-        <ul>
-            <li><span class="lato">></span><a href="/" class="lato">About</a></li>
-            <li><span class="lato">></span><a href="#work" class="lato">Work</a></li>
-            <li><span class="lato">></span><a href="/blog" class="lato">Blog</a></li>
-            <li><span class="lato">></span><a href="#contact" class="lato">Contact</a></li>
-        </ul>
-
-        <div id="socialMediaMenu">
-            <a href="#">
-                <img src="./assets/linkedin-icon.png" alt="Linkedin icon">
-            </a>
-
-            <a href="#">
-                <img src="./assets/github-icon.png" alt="Github icon">
-            </a>
-        </div>
-    </nav> 
 
     <section id="aboutMe">
         <div class="section-info-container">
@@ -69,16 +38,14 @@
 
         <div class="image-gallery" id="aboutSectionGallery">
             <div class="row">
-                <img src="./assets/desktop/webstream-profile.jpg" alt="Webstream profile page" class="desktop-image" />
-                <img src="./assets/desktop/webstream-live.jpg" alt="Webstream stream page" class="desktop-image" />
-
+                <img src="./assets/desktop/webstream-profile.jpg" alt="Webstream profile page" class="desktop-image" width="260" />
+                <img src="./assets/desktop/webstream-live.jpg" alt="Webstream stream page" class="desktop-image" width="260" />
 
                 <img src="./assets/mobile/webstream-live.jpg" alt="Webstream stream page" class="mobile-image" />
             </div>
             <div class="row">
                 <img src="./assets/desktop/topstyle-mobile.jpg" alt="TopStyle mobile" class="desktop-image" />
                 <img src="./assets/desktop/topstyle-desktop.jpg" alt="TopStyle desktop" class="desktop-image" />
-
 
                 <img src="./assets/mobile/topstyle-desktop.jpg" alt="TopStyle desktop" class="mobile-image" />
             </div>
@@ -88,10 +55,29 @@
                 <img src="./assets/desktop/mp-new-profile.jpg" alt="Mission Planner new UAV profile" class="desktop-image" />
                 <img src="./assets/desktop/mp-starter.jpg" alt="Mission Planner starter page" class="desktop-image" />
 
-
                 <img src="./assets/mobile/mp-mission-log.jpg" alt="Mission Planner mission log" class="mobile-image" />
                 <img src="./assets/mobile/mp-new-profile.jpg" alt="Mission Planner new UAV profile" class="mobile-image" />
             </div>
+        </div>
+    </section>
+
+
+    <section id="missionPlanner">
+        <div class="section-info-container">
+            <h1 class="gsc">AK Streaming</h1>
+            <p class="paragraph-text lato">AK Streaming demonstrates the use of REST API’s to enable communication between a React front end and a Django back end. Requests are initially directed to a well-organized Nginx server, from which they are redirected to either an individual application server - Daphne, or to static file locations. Celery triggers asynchronous tasks, which employ Ffmpeg in streaming webcam footage to the Nginx server. Docker is used to containerize the project’s seven different services into a single composition, ensuring a risk-free deployment</p>
+
+            <div class="button-container">
+                <a href="#" class="cta-button lato">Read More</a>
+                <a href="#" class="cta-button lato">View Code</a>
+            </div>
+        </div>
+        
+        <div class="image-gallery" id="akStreamingGallery">
+            <img src="./assets/desktop/webstream-profile.jpg" alt="Webstream profile page.">
+            <img src="./assets/desktop/webstream-home.jpg" alt="Webstream home page.">
+            <img src="./assets/desktop/webstream-live.jpg" alt="Webstream live page.">
+            <img src="./assets/desktop/webstream-prepare.jpg" alt="Webstream stream preparation.">
         </div>
     </section>
 
