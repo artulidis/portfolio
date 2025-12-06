@@ -6,7 +6,7 @@
         <meta name="format-detection" content="telephone=no">
         <meta name="description" content="Focused on building meaningful solutions, I embarked on a unique journey to realize my fullest potential as a software developer upon recieving my high school diploma. Grounded in discipline and self-accountability, I’ve pursued a learning path that enables me to learn skills from the inside out and stay ahead of my peers." />
 
-        <title>About - Arthur Kakulidis</title>        
+        <title>Arthur Kakulidis</title>        
         <link rel="icon" href="assets/icons/portfolio-icon.ico" type="image/x-icon" />
         
         <link rel="stylesheet" href="index.css" />
@@ -38,31 +38,31 @@
 
         <div class="image-gallery" id="aboutSectionGallery">
             <div class="row">
-                <img src="./assets/desktop/webstream-profile.jpg" alt="Webstream profile page" class="desktop-image" width="260" />
-                <img src="./assets/desktop/webstream-live.jpg" alt="Webstream stream page" class="desktop-image" width="260" />
+                <img src="./assets/desktop/webstream-profile.jpg" alt="Webstream profile page" class="desktop-image" height="135" />
+                <img src="./assets/desktop/webstream-live.jpg" alt="Webstream stream page" class="desktop-image" height="135" />
 
                 <img src="./assets/mobile/webstream-live.jpg" alt="Webstream stream page" class="mobile-image" />
             </div>
             <div class="row">
-                <img src="./assets/desktop/topstyle-mobile.jpg" alt="TopStyle mobile" class="desktop-image" />
-                <img src="./assets/desktop/topstyle-desktop.jpg" alt="TopStyle desktop" class="desktop-image" />
+                <img src="./assets/desktop/topstyle-mobile.jpg" alt="TopStyle mobile" class="desktop-image" height="210" />
+                <img src="./assets/desktop/topstyle-desktop.jpg" alt="TopStyle desktop" class="desktop-image" height="210" />
 
                 <img src="./assets/mobile/topstyle-desktop.jpg" alt="TopStyle desktop" class="mobile-image" />
             </div>
             <div class="row">
-                <img src="./assets/desktop/mp-register.jpg" alt="Mission Planner register user page" class="desktop-image" />
-                <img src="./assets/desktop/mp-mission-log.jpg" alt="Mission Planner mission log" class="desktop-image" />
-                <img src="./assets/desktop/mp-new-profile.jpg" alt="Mission Planner new UAV profile" class="desktop-image" />
-                <img src="./assets/desktop/mp-starter.jpg" alt="Mission Planner starter page" class="desktop-image" />
+                <img src="./assets/desktop/mp-register.jpg" alt="Mission Planner register page" class="desktop-image" height="275" />
+                <img src="./assets/desktop/mp-mission-log.jpg" alt="Mission Planner log page" class="desktop-image" height="275" />
+                <img src="./assets/desktop/mp-new-profile.jpg" alt="Mission Planner new UAV profile" class="desktop-image" height="275" />
+                <img src="./assets/desktop/mp-starter.jpg" alt="Mission Planner starter page" class="desktop-image" height="275" />
 
-                <img src="./assets/mobile/mp-mission-log.jpg" alt="Mission Planner mission log" class="mobile-image" />
+                <img src="./assets/mobile/mp-mission-log.jpg" alt="Mission Planner log page" class="mobile-image" />
                 <img src="./assets/mobile/mp-new-profile.jpg" alt="Mission Planner new UAV profile" class="mobile-image" />
             </div>
         </div>
     </section>
 
 
-    <section id="missionPlanner">
+    <section id="akStreaming">
         <div class="section-info-container">
             <h1 class="gsc">AK Streaming</h1>
             <p class="paragraph-text lato">AK Streaming demonstrates the use of REST API’s to enable communication between a React front end and a Django back end. Requests are initially directed to a well-organized Nginx server, from which they are redirected to either an individual application server - Daphne, or to static file locations. Celery triggers asynchronous tasks, which employ Ffmpeg in streaming webcam footage to the Nginx server. Docker is used to containerize the project’s seven different services into a single composition, ensuring a risk-free deployment</p>
@@ -74,43 +74,56 @@
         </div>
         
         <div class="image-gallery" id="akStreamingGallery">
-            <img src="./assets/desktop/webstream-profile.jpg" alt="Webstream profile page.">
-            <img src="./assets/desktop/webstream-home.jpg" alt="Webstream home page.">
-            <img src="./assets/desktop/webstream-live.jpg" alt="Webstream live page.">
-            <img src="./assets/desktop/webstream-prepare.jpg" alt="Webstream stream preparation.">
+            <img src="./assets/desktop/webstream-profile.jpg" alt="Webstream profile page">
+            <img src="./assets/desktop/webstream-home.jpg" alt="Webstream home page">
+            <img src="./assets/desktop/webstream-live.jpg" alt="Webstream live page">
+            <img src="./assets/desktop/webstream-prepare.jpg" alt="Webstream stream preparation">
         </div>
     </section>
 
-    <!-- Mobile Menu -->
-    <script type="text/javascript">
-        document.addEventListener("DOMContentLoaded", () => {
-            const hamburger = document.getElementById("hamburgerMenu");
-            const menu = document.getElementById("mobileMenu");
-            const overlay = document.createElement("div");
-            const navItems = menu.querySelectorAll("li");
-            overlay.id = "menuOverlay";
-            document.body.appendChild(overlay);
+    <section id="topStyle">
+        <div class="section-info-container">
+            <h1 class="gsc">TopStyle</h1>
+            <p class="paragraph-text lato">Began freelancing for TopStyle in 2019 using the Django framework, HTML, and CSS. Designed a mobile-first user interface and an admin page to facilitate content management. Regularly communicate with the client to make design adjustments and maintain the website, ensuring a smooth user experience.</p>
 
-            const closeBtn = document.getElementById("menuClose");
+            <div class="button-container">
+                <a href="#" class="cta-button lato">Visit Site</a>
+                <a href="#" class="cta-button lato">View Code</a>
+            </div>
+        </div>
+        
+        <div class="image-gallery" id="topStyleGallery">
+            <div class="row">
+                <img src="./assets/desktop/topstyle-mobile.jpg" alt="TopStyle mobile">
+                <img src="./assets/desktop/topstyle-desktop.jpg" alt="TopStyle desktop">
+            </div>
+        </div>
+    </section>
 
-            function openMenu() {
-                menu.classList.add("open");
-                overlay.classList.add("open");
-                document.body.style.overflow = "hidden";
-            }
+    <section id="missionPlanner">
+        <div class="section-info-container">
+            <h1 class="gsc">Mission Planner</h1>
+            <p class="paragraph-text lato">Developed an Android application that helps a team of six UAV pilots calculate flight capabilities based on mission and drone input parameters. The application streamlines the calculation process and improves on the traditional spreadsheet method by allowing users to save, import, and export UAV profiles through CSV files, keep mission history in logs, and visualize flight paths on a cartesian plane.</p>
 
-            function closeMenu() {
-                menu.classList.remove("open");
-                overlay.classList.remove("open");
-                document.body.style.overflow = "";
-            }
+            <div class="button-container">
+                <a href="#" class="cta-button lato">Install</a>
+                <a href="#" class="cta-button lato">View Code</a>
+            </div>
+        </div>
+        
+        <div class="image-gallery" id="missionPlannerGallery">
+            <div class="row">
+                <img src="./assets/desktop/mp-register.jpg" alt="Mission Planner register page">
+                <img src="./assets/desktop/mp-starter.jpg" alt="Mission Planner starter page">
+                <img src="./assets/desktop/mp-new-profile.jpg" alt="Mission Planner new UAV profile">
+            </div>
 
-            hamburger.addEventListener("click", openMenu);
-            closeBtn.addEventListener("click", closeMenu);
-            overlay.addEventListener("click", closeMenu);
-            navItems.forEach((i) => i.addEventListener("click", closeMenu))
-        });
-    </script>
-
+            <div class="row">
+                <img src="./assets/desktop/mp-new-mission.jpg" alt="Mission Planner new mission">
+                <img src="./assets/desktop/mp-profile.jpg" alt="Mission Planner UAV profile page">
+                <img src="./assets/desktop/mp-mission-log.jpg" alt="Mission Planner log page">
+            </div>
+        </div>
+    </section>
 </body>
 </html>

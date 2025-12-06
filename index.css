@@ -60,14 +60,13 @@ a {
 header {
     height: 8rem;
     display: flex;
-    flex-direction: row-reverse;
-    padding-right: 1rem;
+    padding-left: 1rem;
     align-items: center;
 }
 
 header h3 {
     font-size: var(--font-size-regular);
-    margin-right: 2.5rem;
+    margin-left: 2.5rem;
 }
 
 header .round {
@@ -80,15 +79,14 @@ header .round {
 
 section {
     padding: 0 3rem;
-    margin-bottom: 10rem;
+    margin-bottom: 10vh;
     display: flex;
-    align-items: start;
+    align-items: center;
     justify-content: space-between;
+    min-height: 80vh;
 }
 
-#aboutMe { margin-top: 4rem; }
-
-.section-info-container { max-width: 50rem; margin-top: 3rem; }
+.section-info-container { max-width: 50rem; margin-top: 0rem; }
 
 
 .section-info-container h1 {
@@ -152,7 +150,15 @@ section {
     gap: 1rem;
 }
 
-#akStreamingGallery img { width: 30rem; }
+#akStreamingGallery img { width: 25rem; margin-left: 0; }
+
+#topStyleGallery { display: flex; }
+#topStyleGallery img { height: 20rem; }
+
+#missionPlannerGallery .row { align-items: baseline; }
+#missionPlannerGallery .row:nth-child(2) { align-items: start; }
+
+#missionPlannerGallery img { width: 10rem; }
 
 @media (max-width: 1000px) {
 
@@ -165,8 +171,6 @@ section {
         margin: 0 0 0 2.5rem;
     }
 
-    #aboutMe { margin-top: 2rem; }
-
     section {
         padding: 0;
         flex-direction: column;
@@ -174,6 +178,8 @@ section {
         justify-content: start;
         margin-bottom: 5rem;
     }
+
+    #aboutMe { margin-top: 2rem; align-items: start; }
 
     .image-gallery { margin: 5rem 0; }
 
@@ -209,4 +215,7 @@ section {
         grid-template-rows: repeat(4, 1fr);
 
     }
+
+    #topStyleGallery .row { flex-direction: column-reverse; gap: 3rem; }
+    #topStyleGallery img { width: 80%; height: auto; }
 }
